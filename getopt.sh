@@ -1,13 +1,13 @@
 #!/bin/bash
 
-set -- `getopt "abcd:" "$@"`   # разбор аргументов командной строки в позиционные параметры.
+set -- `getopt "abcd:" "$@"`   
 while [ ! -z "$1" ]
 do
   case "$1" in
-    -a) echo "Опция \"a\"";;
-    -b) echo "Опция \"b\"";;
-    -c) echo "Опция \"c\"";;
-    -d) echo "Опция \"d\" $2";;
+    -a) echo "option \"a\"";;
+    -b) echo "option \"b\"";;
+    -c) echo "option \"c\"";;
+    -d) echo "option \"d\" $2";;
      *) break;;
   esac
   shift
