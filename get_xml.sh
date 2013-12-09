@@ -50,13 +50,13 @@ fi
 
 mkdir $dir
 
-cookie=2:1377157447.-66.5.220977011.8:1377157447188:3585399119:22.1.1.1.0.97552.2063.b02e14d0f4db6bf88b6a04572a1c50a8
-wmi=http://verstka3-qa.yandex.ru/api/message?xml_version=daria2&ids="$mid"
+cookie=$cookie_path
+wmi=$wmi_path
 
 get_xml ()
 {
 mid=$1
-curl -b 'Session_id='$cookie'' 'http://verstka3-qa.yandex.ru/api/message?xml_version=daria2&ids='$mid'' > $dir/$mid.xml
+curl -b 'Session_id='$cookie'' '$server_path'$mid'' > $dir/$mid.xml
 }
 
 cat $file | while read line; do
